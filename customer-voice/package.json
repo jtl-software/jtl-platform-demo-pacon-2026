@@ -1,0 +1,22 @@
+{
+  "name": "customer-voice",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "register": "npx -y @jtl-software/create-cloud-app@latest register"
+  },
+  "packageManager": "npm@10.8.2",
+  "devDependencies": {
+    "turbo": "^2.5.5"
+  }
+}

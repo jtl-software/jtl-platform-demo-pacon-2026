@@ -1,0 +1,95 @@
+{
+  "manifest": {
+    "technicalName": "customer-voice-e26bec",
+    "version": "1.0.0",
+    "lifecycle": {
+      "configurationUrl": "http://localhost:3004/setup?dummy-pairing-flow=true"
+    },
+    "capabilities": {
+      "hub": {
+        "appLauncher": {
+          "redirectUrl": "http://localhost:3004/hub?dummy-standalone=true"
+        }
+      },
+      "erp": {
+        "menuItems": [
+          {
+            "id": "customer-voice-dashboard",
+            "name": "Dashboard",
+            "url": "http://localhost:3004/dashboard"
+          },
+          {
+            "id": "customer-voice-config",
+            "name": "Configuration",
+            "url": "http://localhost:3004/config"
+          }
+        ],
+        "api": {
+          "scopes": []
+        },
+        "pane": [
+          {
+            "id": "customer-voice-customer-pane",
+            "context": "$tenantSlug.customers",
+            "matchChildContext": true,
+            "title": "CustomerVoice Feedbacks",
+            "url": "http://localhost:3004/panel/customer",
+            "requiredScopes": []
+          },
+          {
+            "id": "customer-voice-article-pane",
+            "context": "items",
+            "matchChildContext": true,
+            "title": "CustomerVoice Feedbacks",
+            "url": "http://localhost:3004/panel/article",
+            "requiredScopes": []
+          }
+        ]
+      }
+    }
+  },
+  "listing": {
+    "version": "1.0.0",
+    "defaultLocale": "de-DE",
+    "name": {
+      "de-DE": {
+        "short": "CustomerVoice",
+        "full": "CustomerVoice"
+      }
+    },
+    "description": {
+      "de-DE": {
+        "short": "Centrally manage customer feedback",
+        "full": "CustomerVoice collects product reviews from the shop and surfaces them directly in the Cloud ERP."
+      }
+    },
+    "media": {
+      "icons": {
+        "light": "https://hub.jtl-cloud.com/assets/image-placeholder.png",
+        "dark": "https://hub.jtl-cloud.com/assets/image-placeholder.png"
+      }
+    },
+    "pricing": {
+      "freePlan": true
+    },
+    "support": {
+      "url": {
+        "de-DE": "https://example.com/support-for-app-xy"
+      },
+      "documentation": {
+        "de-DE": "https://example.com/guide-for-app-xy"
+      }
+    },
+    "legal": {
+      "privacyPolicy": "https://example.com/privacy",
+      "termsOfUse": "https://example.com/terms-of-use",
+      "gdpr": {
+        "request": "https://example.com/gdpr/request",
+        "delete": "https://example.com/gdpr/delete"
+      }
+    },
+    "editorial": {
+      "status": false
+    }
+  }
+}
