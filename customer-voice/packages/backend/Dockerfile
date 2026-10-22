@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM node:23-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Runtime
-FROM node:23-alpine AS final
+FROM node:24-alpine AS final
 
 RUN addgroup -S nodegrp -g 10001 && adduser -S nodeusr -G nodegrp -u 10001
 
