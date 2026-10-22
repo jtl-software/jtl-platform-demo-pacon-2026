@@ -1,5 +1,5 @@
 # ---------- Stage 1 & 2: Build js-core and frontend ----------
-FROM node:23-alpine AS build
+FROM node:24-alpine AS build
 
 ARG VITE_API_URL
 
